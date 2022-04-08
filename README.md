@@ -7,7 +7,7 @@
 An Angular application that allows a user to add quotes, upvotes, downvotes and also allows one to delete a quote.
 
 ### Author's Information
-* [Peter Njenga](https://github.com/han254)
+* Github: [Peter Njenga](https://github.com/han254)
 * Twitter handle: [https://twitter.com/Hanselpeter4]
 
 ## Setup/Installation Requirements
@@ -26,7 +26,7 @@ An Angular application that allows a user to add quotes, upvotes, downvotes and 
 * You can contact me through my email[peternjenga1706@gmail.com]
 * Github [https://github.com/han254]
 
-#### Link to my github-pages
+### Link to my github-pages
 ()
 ### License
 
