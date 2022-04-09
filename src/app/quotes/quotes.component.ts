@@ -8,10 +8,10 @@ import { Quote } from '../quote';
 })
 export class quotesComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote(1, 'my first quote', 0, 0),
-    new Quote(1, 'my first quote', 0, 0),
-    new Quote(1, 'my first quote', 0, 0),
-    new Quote(1, 'my first quote', 0, 0),
+    new Quote(1, 'write your quote', 1, 0),
+    new Quote(1, 'write your quote', 0, 0),
+    new Quote(1, 'write your quote', 0, 0),
+    new Quote(1, 'write your quote', 0, 0),
   ];
   constructor() {}
 
