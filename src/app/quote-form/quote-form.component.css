@@ -5,8 +5,17 @@
   box-shadow: 2px 2px 3px 2px black;
   margin-bottom: 5%;
 }
-label{
-    text-align: center;
-    color: green;
-    font-weight:500;
+label {
+  
+  color: green;
+  font-weight: 500;
+}
+.btn{
+  width:80px;
+
+}
+.form-control{
+  background: transparent;
+  font-weight: 570;
+  border: 1px solid grey;
 }
