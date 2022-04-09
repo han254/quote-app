@@ -1,5 +1,13 @@
 <ul *ngFor='let quote of quotes'>
-  <li> {{quote.quote}} <span>{{quote.upvotes}}</span> <span class="btn-warning ml-2">{{quote.downvotes}}</span>
-  </li>
+    <div *ngIf="quote.upvotes==highest; then highlight else empty"></div>
+    <ng-template #highlight>
+         <li appHighlight> {{quote.quote}} <span>{{quote.upvotes}}</span> <span class="ml-2">{{quote.downvotes}}</span>
+         </li>
+    </ng-template>
+    <ng-template #empty>
+         <li> {{quote.quote}} <span>{{quote.upvotes}}</span> <span class="ml-2">{{quote.downvotes}}</span>
+         </li>
+    </ng-template>
+ 
 
 </ul>
