@@ -1,1 +1,8 @@
+.container-fluid {
+  background-color: rgb(255, 235, 205);
+  border-radius: 4px;
+  padding-bottom: 5%;
+  box-shadow: 2px 2px 3px 2px black;
+  margin-bottom: 5%;
+}
 
