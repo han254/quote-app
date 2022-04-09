@@ -3,7 +3,7 @@ export class Quote {
     quote!:string;
     upvotes!:number;
     downvotes!:number;
-    constructor(id:number, quote:string, upvotes:number ,downvotes:number){
+    constructor(id:number, quote:string, upvotes:number ,downvotes:number, public completedate:Date){
     // initializing
     this.id = id;
     this.quote = quote;

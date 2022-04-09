@@ -1,13 +1,22 @@
-<ul *ngFor='let quote of quotes'>
-    <div *ngIf="quote.upvotes==highest; then highlight else empty"></div>
-    <ng-template #highlight>
-         <li appHighlight> {{quote.quote}} <span>{{quote.upvotes}}</span> <span class="ml-2">{{quote.downvotes}}</span>
-         </li>
-    </ng-template>
-    <ng-template #empty>
-         <li> {{quote.quote}} <span>{{quote.upvotes}}</span> <span class="ml-2">{{quote.downvotes}}</span>
-         </li>
-    </ng-template>
- 
+<div class="quote-container">
+     <h1>Add Your Quote</h1>
+     <hr>
+ <div class="card">
+   <div class="card-body">
+        <ul *ngFor='let quote of quotes;let i =index'>
+          <div *ngIf="quote.upvotes==highest; then highlight else empty"></div>
+          <ng-template #highlight>
+            <li appHighlight> {{quote.quote}} <span>{{quote.upvotes}}</span> <span
+                class="ml-2">{{quote.downvotes}}</span>
+            </li>
+          </ng-template>
+          <ng-template #empty>
+            <li> {{quote.quote}} <span>{{quote.upvotes}}</span> <span class="ml-2">{{quote.downvotes}}</span>
+            </li>
+          </ng-template>
+          </ul>
 
-</ul>
+   </div>
+ </div>
+</div>
+
