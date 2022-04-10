@@ -11,7 +11,7 @@ export class quotesComponent implements OnInit {
     new Quote(
       1,
       'We cannot solve problems with the kind of thinking we employed when we came up with them.',
-      0,
+      4,
       0,
       new Date(2020, 3, 14),
       'By:Albert Einstein',
@@ -36,14 +36,14 @@ export class quotesComponent implements OnInit {
     quote.postDate = new Date(quote.postDate);
     this.quotes.push(quote);
   }
-  removeQuote(isUpvoted: any, i: any) {
+  removeQuote(isUpvoted: boolean, index:number) {
     if (isUpvoted) {
       let toDelete = confirm(
         'Are you sure you want to delete this Quote? ${this.quotes[i].quote} quote.'
       );
 
       if (toDelete) {
-        this.quotes.splice(i, 1);
+        this.quotes.splice(index, 1);
       }
     }
   }
