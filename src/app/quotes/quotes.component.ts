@@ -36,7 +36,18 @@ export class quotesComponent implements OnInit {
     quote.postDate = new Date(quote.postDate);
     this.quotes.push(quote);
   }
- 
+  removeQuote(isUpvoted: any, i: any) {
+    if (isUpvoted) {
+      let toDelete = confirm(
+        'Are you sure you want to delete this Quote? ${this.quotes[i].quote} quote.'
+      );
+
+      if (toDelete) {
+        this.quotes.splice(i, 1);
+      }
+    }
+  }
+
   constructor() {}
 
   ngOnInit(): void {}
