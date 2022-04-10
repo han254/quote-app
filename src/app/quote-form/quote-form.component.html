@@ -4,18 +4,24 @@
     <form (ngSubmit)="postQuote()" #post="ngForm">
       <div class="form-group">
         <label class="label mx-auto" for="name">Poster's Name</label>
-        <input type="text" required class="form-control" id="name" [(ngModel)]="mypostQuote.user" name="user" #user="ngModel">
-        <div [hidden]="user.valid || user.pristine" class="alert alert-danger"></div>
+        <input type="text" class="form-control" id="name" [(ngModel)]="mypostQuote.user" name="user" #user="ngModel" required>
+        <div [hidden]="user.valid || user.pristine" class="alert alert-warning">
+          <p>Your name is required!</p>
+        </div>
       </div>
       <div class="form-group">
         <label for="name">AUthor's Name</label>
-        <input type="text" required class="form-control" id="name" [(ngModel)]="mypostQuote.author" name="author" #author="ngModel">
-        <div [hidden]="author.valid || author.pristine" class="alert alert-danger"></div>
+        <input type="text" class="form-control" id="name" [(ngModel)]="mypostQuote.author" name="author" #author="ngModel" required>
+        <div [hidden]="author.valid || author.pristine" class="alert alert-warning">
+          <p>Author's name is required!</p>
+        </div>
       </div>
       <div class="form-group">
         <label for="description">Quote</label>
-        <textarea class="form-control" id="quote-text" rows="4" required [(ngModel)]="mypostQuote.quote" name="quote" #quote="ngModel"></textarea>
-         <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger"></div>
+        <textarea class="form-control" id="quote-text" rows="4" [(ngModel)]="mypostQuote.quote" name="quote" #quote="ngModel" required></textarea>
+         <div [hidden]="quote.valid || quote.pristine" class="alert alert-warning">
+           <p>Quote required!</p>
+         </div>
       </div>
     <br>
       <button type="submit" class="btn btn-sm  btn-primary">POST QUOTE</button>
