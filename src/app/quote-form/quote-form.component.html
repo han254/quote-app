@@ -1,26 +1,25 @@
 <div class="container-fluid">
   <hr>
-  <form>
-    <div class="form-group">
+  <div class="form">
+    <form (ngSubmit)="postQuote()" #post="ngForm">
+      <div class="form-group">
+        <label class="label mx-auto" for="name">Poster's Name</label>
+        <input type="text" required class="form-control" id="name" [(ngModel)]="mypostQuote.user" name="user" #user="ngModel">
+        <div [hidden]="user.valid || user.pristine" class="alert alert-danger"></div>
+      </div>
+      <div class="form-group">
+        <label for="name">AUthor's Name</label>
+        <input type="text" required class="form-control" id="name" [(ngModel)]="mypostQuote.author" name="author" #author="ngModel">
+        <div [hidden]="author.valid || author.pristine" class="alert alert-danger"></div>
+      </div>
+      <div class="form-group">
+        <label for="description">Quote</label>
+        <textarea class="form-control" id="quote-text" rows="4" required [(ngModel)]="mypostQuote.quote" name="quote" #quote="ngModel"></textarea>
+         <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger"></div>
+      </div>
+    <br>
+      <button type="submit" class="btn btn-sm  btn-primary">POST QUOTE</button>
 
-      <label class="label mx-auto" for="name">Poster's Name</label>
-      <input type="text" required class="form-control" id="name">
-
-    </div>
-    <div class="form-group">
-
-      <label for="name">AUthor's Name</label>
-      <input type="text" required class="form-control" id="name">
-    </div>
-  <div class="form-group">
-
-    <label for="description">Quote</label>
-    <textarea class="form-control" id="quote-text" rows="4" required></textarea>
-
+    </form>
   </div>
-    <button type="submit" class="btn btn-sm  btn-success">Add</button>
-
-
-
-  </form>
 </div>

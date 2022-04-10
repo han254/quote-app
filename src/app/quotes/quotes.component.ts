@@ -8,12 +8,35 @@ import { Quote } from '../quote';
 })
 export class quotesComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote(1, 'write your quote', 4, 0, new Date(2020, 3, 14)),
-    new Quote(2, 'write your quote', 0, 0, new Date(2022, 3, 24)),
-    new Quote(3, 'write your quote', 0, 0, new Date(2018, 2, 17)),
+    new Quote(
+      1,
+      'We cannot solve problems with the kind of thinking we employed when we came up with them.',
+      0,
+      0,
+      new Date(2020, 3, 14),
+      'By:Albert Einstein',
+      'peter'
+    ),
+    new Quote(
+      1,
+      'We cannot solve problems with the kind of thinking we employed when we came up with them.',
+      0,
+      0,
+      new Date(2020, 3, 14),
+      'By:Albert Einstein',
+      'peter',
+    ),
   ];
   arr: number[] = this.quotes.map((quote) => quote.upvotes);
   highest = Math.max(...this.arr);
+
+  addNewQuote(quote: any) {
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    quote.postDate = new Date(quote.postDate);
+    this.quotes.push(quote);
+  }
+ 
   constructor() {}
 
   ngOnInit(): void {}

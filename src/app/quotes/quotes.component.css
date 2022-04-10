@@ -1,0 +1,16 @@
+ul{
+    width: 40%;
+    background-color:white;
+    height: 30vh;
+    border:1px solid white;
+    border-radius:20px;
+    margin-left:5%;
+}
+ul li{
+    text-decoration: none;
+  list-style-type: none;
+}
+.quote-container{
+    display: flex;
+    margin:10px;
+}

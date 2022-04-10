@@ -1,9 +1,12 @@
 .container-fluid {
-  background-color: rgb(255, 235, 205);
+  background-color: lightgray;
   border-radius: 4px;
   padding-bottom: 5%;
   box-shadow: 2px 2px 3px 2px black;
-  margin-bottom: 5%;
+  height: 530px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  width: 80%;
 }
 label {
   
@@ -11,11 +14,13 @@ label {
   font-weight: 500;
 }
 .btn{
-  width:80px;
+  width:130px;
+  height:40px;
 
 }
 .form-control{
   background: transparent;
   font-weight: 570;
-  border: 1px solid grey;
+  border: 1px solid black;
+  
 }
