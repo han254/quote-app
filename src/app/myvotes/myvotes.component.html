@@ -1,10 +1,10 @@
 <div class="d-flex justify-content-around mb-4">
   <div class="d-flex">
-    <button (click)="upvotes()" class="btn btn-success me-4">likes</button>
+    <button (click)="upvotes()" class="btn btn-success"><i class="fa fa-thumbs-up" id="like"></i></button>
     <p class="fs-3">{{numberOfupvotes}}</p>
   </div>
   <div class="d-flex ">
-    <button (click)="downvotes()" class="btn btn-primary me-4">dilikes</button>
+    <button (click)="downvotes()" class="btn btn-primary"><i class="fa fa-thumbs-down" id="dislike"></i></button>
     <p class="fs-3">{{numberOfdownvotes}}</p>
   </div>
 </div>
