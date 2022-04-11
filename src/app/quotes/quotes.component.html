@@ -1,11 +1,13 @@
-<h1>Add Your Quote</h1>
+<h1>Quote</h1>
 <hr>
 <div class="quote-container">
 
   <ul *ngFor='let quote of quotes;let i =index'>
     <div *ngIf="quote.upvotes==highest; then highlight else empty"></div>
-     {{quote.dateposted|date}}
-     <p>posted {{quote.dateposted|dateCount}} days ago</p>
+    <p>{{quote.user}}</p>
+    <p class="author"> {{quote.author}}</p>
+    {{quote.dateposted|date}}
+    <p>posted {{quote.dateposted|dateCount}} days ago</p>
     <app-myvotes></app-myvotes>
     <app-quote-details (isComplete)="removeQuote($event, i)"></app-quote-details>
     <ng-template #highlight>
