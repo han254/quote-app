@@ -5,7 +5,7 @@
   <ul *ngFor='let quote of quotes;let i =index'>
     <div *ngIf="quote.upvotes==highest; then highlight else empty"></div>
     <p>{{quote.user}}</p>
-    <p class="author"> {{quote.author}}</p>
+    <p class="author"> By:{{quote.author}}</p>
     {{quote.dateposted|date}}
     <p>posted {{quote.dateposted|dateCount}} days ago</p>
     <app-myvotes></app-myvotes>

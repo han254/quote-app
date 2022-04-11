@@ -14,8 +14,8 @@ export class quotesComponent implements OnInit {
       0,
       0,
       new Date(2021, 2, 14),
-      'By:Albert Einstein',
-      'Peter'
+      'Peter',
+      'Albert Einstein'
     ),
     new Quote(
       1,
@@ -23,8 +23,8 @@ export class quotesComponent implements OnInit {
       0,
       0,
       new Date(2022, 3, 11),
-      'By:Albert Einstein',
-      "Peter"
+      'peter',
+      'Albert Einstein'
     ),
   ];
   arr: number[] = this.quotes.map((quote) => quote.upvotes);
@@ -38,9 +38,7 @@ export class quotesComponent implements OnInit {
   }
   removeQuote(isComplete: boolean, index: number) {
     if (isComplete) {
-      let toDelete = confirm(
-        'Are you sure you want to delete this Quote? '
-      );
+      let toDelete = confirm('Are you sure you want to delete this Quote? ');
 
       if (toDelete) {
         this.quotes.splice(index, 1);
