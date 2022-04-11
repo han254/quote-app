@@ -11,35 +11,35 @@ export class quotesComponent implements OnInit {
     new Quote(
       1,
       'We cannot solve problems with the kind of thinking we employed when we came up with them.',
-      4,
       0,
-      new Date(2020, 3, 14),
+      0,
+      new Date(2021, 2, 14),
       'By:Albert Einstein',
-      'peter'
+      'Peter'
     ),
     new Quote(
       1,
       'We cannot solve problems with the kind of thinking we employed when we came up with them.',
       0,
       0,
-      new Date(2020, 3, 14),
+      new Date(2022, 3, 11),
       'By:Albert Einstein',
-      'peter',
+      "Peter"
     ),
   ];
   arr: number[] = this.quotes.map((quote) => quote.upvotes);
   highest = Math.max(...this.arr);
 
-  addNewQuote(quote: any) {
+  addNewQuote(quote: Quote) {
     let quoteLength = this.quotes.length;
-    quote.id = quoteLength ++;
-    quote.postDate = new Date(quote.postDate);
+    quote.id = quoteLength++;
+    quote.dateposted = new Date(quote.dateposted);
     this.quotes.push(quote);
   }
-  removeQuote(isUpvoted: boolean, index:number) {
-    if (isUpvoted) {
+  removeQuote(isComplete: boolean, index: number) {
+    if (isComplete) {
       let toDelete = confirm(
-        'Are you sure you want to delete this Quote? ${this.quotes[i].quote} quote.'
+        'Are you sure you want to delete this Quote? '
       );
 
       if (toDelete) {

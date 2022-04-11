@@ -6,12 +6,12 @@ import { Quote} from '../quote';
   styleUrls: ['./quote-form.component.css'],
 })
 export class QuoteFormComponent implements OnInit {
- 
   @Output() addQuote = new EventEmitter<Quote>();
   postQuote() {
     this.addQuote.emit(this.mypostQuote);
   }
   mypostQuote = new Quote(0, '', 0, 0, new Date(), '', '');
+
   constructor() {}
 
   ngOnInit(): void {}
