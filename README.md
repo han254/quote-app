@@ -17,9 +17,11 @@ An Angular application that allows a user to add quotes, upvotes, downvotes and 
 * open your IDE (code . or atom .) 
 
 ## Technologies Used
-* AngularCLI
+* [AngularCLI]
 * HTML
 * Markdown
+* CSS
+* Bootstrap
 
 ## Support and contact details
 
