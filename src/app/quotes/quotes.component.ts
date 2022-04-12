@@ -27,8 +27,7 @@ export class quotesComponent implements OnInit {
       'Albert Einstein'
     ),
   ];
-  arr: number[] = this.quotes.map((quote) => quote.upvotes);
-  highest = Math.max(...this.arr);
+
 
   addNewQuote(quote: Quote) {
     let quoteLength = this.quotes.length;
@@ -44,6 +43,22 @@ export class quotesComponent implements OnInit {
         this.quotes.splice(index, 1);
       }
     }
+  }
+  first!: number;
+  last!: number;
+  count!: number;
+
+  highest() {
+    this.first = 0;
+    this.last = 0;
+
+    for (this.count = 0; this.count < this.quotes.length; this.count++) {
+      this.last = this.quotes[this.count].upvotes;
+      if (this.last > this.first) {
+        this.first = this.last;
+      }
+    }
+    return this.first;
   }
 
   constructor() {}
