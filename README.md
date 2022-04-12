@@ -27,7 +27,7 @@ An Angular application that allows a user to add quotes, upvotes, downvotes and 
 * Github [https://github.com/han254]
 
 ### Link to my github-pages
-()
+(https://han254.github.io/quote-app/)
 ### License
 
 Copyright (c) 2022 [click here to view license](LICENSE)
